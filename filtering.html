@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <title>demo</title>
+</head>
+
+<body>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script>
+          $(document).ready(function () {
+               $("#myInput").on("keyup", function () {
+                    var value = $(this).val().toLowerCase();
+                    $("#myTable tr").filter(function () {
+                         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    });
+               });
+          });
+
+     </script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script>
+          $(document).ready(function ($) {
+
+               $('#select').change(function () {
+
+                    var selection = $(this).val();
+                    var dataset = $('table').find('tr');
+
+                    dataset.show();
+
+                    dataset.filter(function (index, item) {
+                         return $(item).find('td:first-child').text().split('').indexOf(selection) === -1;
+                    }).hide();
+
+               });
+          });
+     </script>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script>
+          $(document).ready(function ($) {
+
+               $('#sal').change(function () {
+
+                    var selection = $(this).val();
+                    var dataset = $('table').find('tr');
+
+                    dataset.show();
+
+                    dataset.filter(function (index, item) {
+                         return $(item).find('td:first-child').text().split('').indexOf(selection) === -1;
+                    }).hide();
+
+               });
+          });
+     </script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script>
+          $(document).ready(function () {
+               $('input[type="radio"]').change(function () {
+
+                    var auto = $('input[name="auto"]:checked').prop('value') || '';
+
+
+                    var trs = $('tr:not(:first)');
+                    $(trs).hide();
+
+                    if (auto == 'inactive') {
+
+                    }
+                    else {
+                         if (auto != '' && auto != 'inactive') {
+                              var chkdName = $('input[name="auto"]:checked').prop('name');
+                              trs = $(trs).find("." + chkdName + ':contains(' + auto + ')').parent();
+                         }
+
+
+                    }
+                    $(trs).show();
+               });
+               $("#reset").on('click', function () {
+                    $(':radio').prop('checked', false);
+                    $('tr').show();
+               });
+
+          });
+     </script>
+
+     <style>
+          body {
+               background-color: coral;
+          }
+
+          table {
+               font-family: arial, sans-serif;
+               border-collapse: collapse;
+               width: 100%;
+          }
+
+          td,
+          th {
+               border: 1px solid #dddddd;
+               text-align: left;
+               padding: 8px;
+          }
+
+          tr:nth-child(even) {
+               background-color: blue;
+          }
+
+          tr:nth-child(odd) {
+               background-color: red;
+          }
+     </style>
+
+     <center>
+          <h1 style="color: blue"><u>filtering event</u></h1>
+     </center>
+     <form name="FilterForm" id="FilterForm" action="" method="">
+          <input type="radio" id="male" name="auto" value="India">
+          <label>India</label>
+          <input type="radio" id="female" name="auto" value="America">
+          <label>America</label>
+          <input type="radio" id="other" name="auto" value="Australia">
+          <label>Australia</label>
+          <input type="radio" id="male" name="auto" value="England">
+          <label>England</label><br><br>
+          <input type="radio" id="female" name="auto" value="Chennai">
+          <label>Chennai </label>
+          <input type="radio" id="other" name="auto" value="Mumbai">
+          <label>Mumbai</label>
+          <input type="radio" id="other" name="auto" value="Delhi">
+          <label>Delhi</label>
+          <input type="radio" id="other" name="auto" value="Bangalore">
+          <label>Bangalore</label>
+          <input type="radio" id="other" name="auto" value="New york">
+          <label>New york</label>
+          <input type="radio" id="other" name="auto" value="washington">
+          <label>washington</label>
+          <input type="radio" id="other" name="auto" value="Los Angels">
+          <label>Los Angels</label>
+          <input type="radio" id="other" name="auto" value="California">
+          <label>California</label>
+          <br>
+          <br>
+          <form action="/action_page.php">
+
+
+
+               <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+               <select style="background-color: #09f505;color: red" id='select'>
+                    <option style="background-color: red;color: blue" value="all"> choose age </option>
+                    <option style="background-color: red;color: blue" value="1"> 20-25 </option>
+                    <option style="background-color: red;color: blue" value="2"> 25-31 </option>
+                    <option style="background-color: red;color: blue" value="3"> 32-37 </option>
+               </select>
+
+               <select style="background-color: #09f505;color: red" id='sal'>
+                    <option style="background-color: red;color: blue" value="all">choose salary</option>
+                    <option style="background-color: red;color: blue" value="1">21000-31000</option>
+                    <option style="background-color: red;color: blue" value="2">31000-41000</option>
+                    <option style="background-color: red;color: blue" value="3">41000-50000</option>
+               </select>
+          </form>
+          <br>
+          <br><button style="background-color: red;color: blue" id="reset">Reset</button><br><br><br><br>
+
+
+          <input style="float: right;" id="myInput" type="text" placeholder="Search..">
+          <hr>
+
+          <table border="2">
+
+               <tr>
+                    <th>sIno</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Office</th>
+                    <th>joining date</th>
+                    <th>salary</th>
+                    <th>Email id</th>
+                    <th>phone number</th>
+                    <th>City</th>
+                    <th>country</th>
+               </tr>
+
+
+               <tr>
+                    <tbody id="myTable">
+                         <td>1</td>
+                         <td>karthick</td>
+                         <td>23</td>
+                         <td>velafc</td>
+                         <td>19/05/18</td>
+                         <td>21705</td>
+                         <td>karthikeyan3071007@gmail.com</td>
+                         <td>7010776772</td>
+                         <td class="auto">Chennai</td>
+                         <td class="auto">India</td>
+               </tr>
+
+               <tr>
+                    <td>2</td>
+                    <td>abdul</td>
+                    <td>31</td>
+                    <td>vela fc</td>
+                    <td>20/05/18</td>
+                    <td>41705</td>
+                    <td>abdulnishar@gmail.com</td>
+                    <td>984257784</td>
+                    <td class="auto">Los Angels </td>
+                    <td class="auto">England</td>
+               </tr>
+
+               <tr>
+                    <td>3</td>
+                    <td>mani</td>
+                    <td>37</td>
+                    <td>vela fc</td>
+                    <td>23/05/18</td>
+                    <td>31000</td>
+                    <td>manoj@gmail.com</td>
+                    <td>984257784</td>
+                    <td class="auto">chennai</td>
+                    <td class="auto">Mumbai</td>
+               </tr>
+
+               <tr>
+                    <td>4</td>
+                    <td>manoj</td>
+                    <td>45</td>
+                    <td>vela fc</td>
+                    <td>03/05/18</td>
+                    <td>21000</td>
+                    <td>mani@gmail.com</td>
+                    <td>984257784</td>
+                    <td class="auto">Delhi</td>
+                    <td class="auto">America</td>
+               </tr>
+
+               <tr>
+                    <td>5</td>
+                    <td>ranjith</td>
+                    <td>35</td>
+                    <td>vela fc</td>
+                    <td>23/05/18</td>
+                    <td>50000</td>
+                    <td>ranjith@gmail.com</td>
+                    <td>984257784</td>
+                    <td class="auto"> washington</td>
+                    <td class="auto">California</td>
+                    </tbody>
+               </tr>
+          </table>
+</body>
+
+</html>

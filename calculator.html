@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.ui {
+  background-color: black;
+  width:180px;
+  height:280px;
+  border-style:solid;
+  border-width:2px;
+  padding:5px;
+}
+
+
+.numBtn {
+  color: black;
+  width: 30px;
+  height: 30px;
+} 
+.opBtn {
+  background-color: white;
+  color:black;
+  font: size 14;
+  width: 30px;
+  height: 30px;
+}
+.calBtn {
+  background-color: white;
+  color:black;
+  font: size 14;
+  width:30px;;
+  height: 30px;
+} 
+.clrBtn {
+  background-color: white;
+  color:black;
+  font: size 14;
+  width: 30px;
+  height: 30px;
+} 
+.delBtn{
+     width: 30px;
+  height: 30px;
+}
+
+.numtxt
+{
+  background-color: white;
+  color:black;
+  font: size 14;
+  height: 20px;
+  text-align:right;}
+</style>
+
+
+<body style="font-family:arial;background-color: rgb(211, 20, 20);"> 
+<h1>CALCULATOR</h1>  
+<div class="ui" align="center"> 
+    
+<input type="text" colspan="4" class="numtxt" id="input"></input><br><br>
+<button class="numBtn" value="1">1</button>
+<button class="numBtn" value="2">2</button>
+<button class="numBtn" value="3">3</button>
+<button class="opBtn" value="+">+</button>
+<br>
+
+<button class="numBtn" value="4">4</button>
+<button class="numBtn" value="5">5</button>
+<button class="numBtn" value="6">6</button>
+<button class="opBtn" value="-">-</button><br>
+
+ <button class="numBtn" value="7">7</button>
+  <button class="numBtn" value="8">8</button>
+<button class="numBtn" value="9">9</button>
+<button class="opBtn" value="*">*</button><br>
+ 
+<button class="clrBtn"  value="c">C</button>
+<button class="numBtn" value="0">0</button>
+<button class="opBtn"  value=".">.</button>
+<button class="opBtn" value="/">/</button><br>
+                
+<button   class="delBtn" value="del">del</button>
+<button class="opBtn" value="%">%</button>
+<button id="equal" class="calBtn" value="="style="width: 65px;height: 30px;">=</button><br><br>
+          
+ <button id ="submit"class="calBtn" value="submit" style="width: 80px;height: 30px;">submit</button>
+ <button id="Reset" class="clrBtn" value="Reset" style="width: 80px;height: 30px;">Reset</button>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".numBtn").click(function(){
+	var value1 = $( this ).val();
+	var value2 = $( "#input" ).val();
+    $( "#input" ).val( value2+value1);
+  });
+  
+  $(".clrBtn").click(function(){
+	$( "#input" ).val("");
+  });
+  
+  $(".opBtn").click(function(){
+	var value1 = $( this ).val();
+	var value2 = $( "#input" ).val();
+    $( "#input" ).val( value2+value1);
+  });
+
+$(".delBtn").click(function() {
+    var value1 = $("#input");
+    var value2 = value1.val();
+    value2 = value2.substring(0, value2.length - 1);
+    value1.val(value2);
+});
+	$(".calBtn").click(function(){
+		var value2 = eval($( "#input" ).val());
+		$( "#input" ).val( value2);
+	  });
+     });
+</script>
+</div>
+</body>
+</head>
+</html>
