@@ -3,7 +3,7 @@
 
 1.Create a calculator.
 
-2. Create a joint account in a Bank using localStorage. When credit and debit happens in one account it has to be reflected in the other joint account as well.
+2.Create a joint account in a Bank using localStorage. When credit and debit happens in one account it has to be reflected in the other joint account as well.
 
 3.Create an order form
 Order Form Fields :
