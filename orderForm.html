@@ -1,0 +1,121 @@
+<html>
+
+<head>
+    <title>Order Form</title>
+    <style>
+        body {
+            background-color: burlywood;
+        }
+
+        .small-text {
+            width: 80px;
+        }
+
+        #radio,
+        #checkbox {
+            display: inline;
+            margin-right: 2px;
+        }
+
+        #order-head {
+            padding: 20px;
+            color: rgb(12, 0, 0);
+        }
+
+        #order-body {
+            width: 100%;
+            padding: 5px;
+            display: flex;
+        }
+
+        #order-body button {
+            margin: 5px;
+        }
+
+        #order-footer {
+            width: 100%;
+            margin: 20 auto;
+            display: flex;
+
+        }
+
+        .form {
+            width: 90%;
+            margin: 30px auto;
+        }
+
+        .row {
+            margin-bottom: 10px;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .table,
+        th,
+        td,
+        tr {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <form name='orderForm' class="form">
+        <div id="order-head">
+            <h1 align='center'>Shopping List</h1>
+            <div id="order-row-1" class="row">
+                <input type="text" id="pro-id1" class="text-box small-text input" required>
+                <input type="text" id="pro-name1" class="text-box input" required>
+                <select id="pro-category1" class="input">
+                    <option value="Mobile">
+                        Mobile
+                    </option>
+                    <option value="Computer">Computer</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="text" id="quantity1" class="text-box small-text input" required>
+                <div id="radio" class="input">
+                    <label>Availablity :</label><input type="radio" value="Yes" id="yes1" name="availablity1" /> Yes
+                    <input type="radio" value="No" id="no1" name="availablity1" /> No
+                </div>
+                <div id="checkbox" class="input">
+                    <label>Discounts :</label>
+                    <input type="checkbox" value="HDFC Bank" name="discounts1" />HDFC Bank
+                    <input type="checkbox" value="SBI Bank" name="discounts1">SBI Bank
+                    <input type="checkbox" value="Master Card" name="discounts1" />Master Card
+                </div>
+            </div>
+        </div>
+        <div id="order-body">
+            <button type='button' id="add">Add</button>
+            <button type='button' id="submit">submit</button>
+            <button type='button' id="reset">Reset</button>
+        </div>
+        <div id="order-footer">
+            <table id="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Product Name</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Availablity</th>
+                        <th>Discounts</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+
+                </tbody>
+            </table>
+        </div>
+    </form>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.js" ></script> </script>
+<script src="orderForm.js"></script>
+
+</html>
