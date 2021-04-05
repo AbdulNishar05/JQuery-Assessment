@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bank.css"/>
+    </head>
+    <body>
+        <div id="calc">
+            <h1 >BANK REGISTRATION PAGE</h1>
+            
+             User Name: <input type="text" id="userId1" /><input id="userCheck1" type="button"  value="checkAvailability"/> <br><br>
+             Password: <input type="password" id="pass1" onkeyup="points('1')"/><span id="mark1">&#10006</span> <input id="show1" type="button"  value="show"/> 
+
+            <br>
+            <br><br>
+   
+
+             User Name: <input type="text" id="userId2" /><input id="userCheck2" type="button"  value="checkAvailability"/> <br><br>
+             Password: <input type="password" id="pass2" onkeyup="points('2')"/><span id="mark2">&#10006</span> <input id="show2" type="button"  value="show"/> 
+            
+            <br><br><br>
+            <input type="button" id="register"  value="Register"/>
+            <br>
+       
+
+        </div>
+        <div id="calc1">
+            <h1> Login Page</h1>
+            UserName:<input type="text" id="checkuser" /><br><br>
+            Password:<input type="password" id="checkpass" /><input type="button" id="loginshow" value="show"/>
+            <br>
+            <br>
+            <input type="button" id="login" value="Login"/>
+        </div>
+   
+        <script src="script/jquery.js"></script>
+        <script src="script/jquery-ui.min.js"></script>
+        <script src="script/jquery-ui.js"></script>
+        <script src="script/bank.js"></script>
+    </body>
+</html>

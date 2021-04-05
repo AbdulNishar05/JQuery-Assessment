@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <h1 id="name"> </h1>
+    </head>
+    <body>
+        <div id="acc">
+            <h3>Send Money </h3>
+            <div id="sendDiv">
+                <p id="current"> Current Amount  </p>
+                Enter the user name:<input type="text" id="send"/><br>
+                Enter the Amount:<input type="text" id="sendamt"  onfocus="dip(0)" />
+                <input type="button" value="sendNow" id="butsend"/>
+            </div>
+            <h3>Debit Money</h3>
+            <div id="debitDiv">
+                <p id="current1">Current Amount</p>
+                Enter the Amount:<input type="text" id="debit"  onfocus="dip1(0)"/>
+                <input type="button" value="debit" id="butdebit"/>
+            </div>
+           
+            <h3>Show Balance</h3>
+            <div id="balanceDiv">
+                <p id="di"></p>
+                <input type="button" value="show" id="showbal"/>
+                
+            </div>
+            <h3>Logout</h3>
+            <div id="logout">
+                
+                <input type="button" value="logout" id="butlogout"/>
+                
+            </div>
+        </div>
+        <script src="script/jquery.js"></script>
+        <script src="script/jquery-ui.min.js"></script>
+        <script src="script/jquery-ui.js"></script>
+        <script src="script/success.js"></script>
+    </body>
+</html>

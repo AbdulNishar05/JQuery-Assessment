@@ -1,0 +1,28 @@
+#calc
+{
+    background-color: antiquewhite;
+    width: 100%;
+    height:450px;
+    text-align: center;
+    padding: 40px 40px 40px 40px;
+    margin: left;
+}
+#calc1
+{
+    background-color:lightgray;
+    width: 100%;
+    height:450px;
+    text-align: center;
+   
+}
+#login
+{
+    margin-left: 69px;
+}
+#register
+{
+    height: 20px;
+    width:65px;
+    text-align: center;
+
+}
