@@ -1,0 +1,95 @@
+.ui {
+     background-color: black;
+     width: 180px;
+     height: 280px;
+     border-style: solid;
+     border-width: 2px;
+     padding: 5px;
+}
+
+
+.numBtn {
+     background-color: white;
+     color: black;
+     font: size 14;
+     width: 30px;
+     height: 30px;
+}
+
+.optBtn {
+     background-color: white;
+     color: black;
+     font: size 14;
+     width: 30px;
+     height: 30px;
+}
+
+#addition {
+     background-color: white;
+     color: black;
+     font: size 14;
+     width: 30px;
+     height: 30px;
+}
+
+#subtraction {
+     background-color: white;
+     color: black;
+     font: size 14;
+     width: 30px;
+     height: 30px;
+}
+
+#multiply {
+     background-color: white;
+     color: black;
+     font: size 14;
+     width: 30px;
+     height: 30px;
+}
+
+#divide {
+     background-color: white;
+     color: black;
+     font: size 14;
+     width: 30px;
+     height: 30px;
+}
+
+#modulo {
+     background-color: white;
+     color: black;
+     font: size 14;
+     width: 30px;
+     height: 30px;
+}
+
+.calBtn {
+     background-color: white;
+     color: black;
+     font: size 14;
+     width: 30px;
+     ;
+     height: 30px;
+}
+
+.clrBtn {
+     background-color: white;
+     color: black;
+     font: size 14;
+     width: 30px;
+     height: 30px;
+}
+
+.delBtn {
+     width: 30px;
+     height: 30px;
+}
+
+.numtxt {
+     background-color: white;
+     color: black;
+     font: size 14;
+     height: 20px;
+     text-align: right;
+}
