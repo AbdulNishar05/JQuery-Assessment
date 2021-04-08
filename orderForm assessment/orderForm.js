@@ -16,7 +16,6 @@ $(document).ready(function () {
           var head = $('#order-head');
           var div = "<div id='order-row-" + count + "' class='row'>";
           var row = $('#order-row-1').html();
-          row = row.replace(/1/g, count);
           row = row + '<button type="button" class="del-btn" value="' + count + '">x</button>';
           div = div + row;
           div = div + '</div>'
