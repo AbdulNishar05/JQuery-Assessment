@@ -1,0 +1,62 @@
+body {
+     background-color: burlywood;
+ }
+
+ .small-text {
+     width: 80px;
+ }
+
+ #radio,
+ #checkbox {
+     display: inline;
+     margin-right: 2px;
+ }
+
+ #order-head {
+     padding: 20px;
+     color: rgb(12, 0, 0);
+ }
+
+ #order-body {
+     width: 100%;
+     padding: 5px;
+     display: flex;
+ }
+
+
+ #order-body button {
+     margin: 5px;
+ }
+
+ #order-footer {
+     width: 100%;
+     margin: 20 auto;
+     display: flex;
+
+ }
+
+ .form {
+     width: 90%;
+     margin: 30px auto;
+ }
+
+ .row {
+     margin-bottom: 10px;
+ }
+
+ .table {
+     width: 100%;
+     height: 100%;
+     border-collapse: collapse;
+     background-color: #333;
+     color: #fff;
+ }
+
+ .table,
+ th,
+ td,
+ tr {
+     border: 1px solid black;
+
+
+ }
