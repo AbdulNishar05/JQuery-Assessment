@@ -1,0 +1,47 @@
+
+    <!DOCTYPE html>
+    <html>
+    
+    <head>
+        <title>login</title>
+        <link rel="stylesheet" href="login1.css">
+    </head>
+    
+    <body>
+        <h2>Bank login Page</h2>
+    
+        <div class="div1">
+            <form name="myform" method="post">
+                <label>User Name</label>
+                <input type="text" name="uname" class="inputText" placeholder="User Name" id="user">
+                <br><br>
+                <label>PassWord</label>
+                <input type="PassWord" name="pass" class="inputText" placeholder="PassWord" id="password">
+                <br><br>
+                <input type="button" name="log" value="Login" id="login">
+                <br><br>
+    
+            </form>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#login").click(function () {
+                    {
+                        var user1 = $("#user").val();
+                        var pass1 = $("#password").val();
+                        var user2 = $("#user").val();
+                        var pass2 = $("#password").val()
+                        if (user1 == "Karthi" && pass1 == "1234" || user2 == "Nishar" && pass2 == "12345") {
+                            window.location.href = "bank.html";
+                        }
+                        else {
+                            alert("invalid username and PassWord");
+                        }
+                    }
+                })
+            })
+        </script>
+    </body>
+    
+    </html>
