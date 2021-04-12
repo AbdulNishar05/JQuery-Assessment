@@ -1,75 +1,73 @@
 <html>
 
-<head>
-    <title>Order Form</title>
-    <link rel="stylesheet" href="orderForm.css">   
-</head>
-
-<body>
-    <form name='orderForm' class="form">
-        <div id="order-head">
-            <h1 align='center'>Shopping List</h1>
-            <table id="table1">
-                <thead>
-                    <tr>
-                        <th style="width: 70px;">ID</th>
-                        <th style="width: 180px;">Product Name</th>
-                        <th style="width: 80px;">Category</th>
-                        <th style="width: 80px;">Quantity</th>
-                        <th style="width: 165px;">Availablity</th>
-                        <th style="width: 165px;">Discounts</th>
-                    </tr>
-                </thead>
-            </table>
-            <div id="order-row-1" class="row">
-                <input type="text" id="pro-id1" class="text-box small-text input"  required>
-                <input type="text" id="pro-name1" class="text-box input" required>
-                <select id="pro-category1" class="input">
-                    <option value=""></option>
-                    <option value="Mobile">
-                        Mobile
-                    </option>
-                    <option value="Computer">Computer</option>
-                    <option value="Other">Other</option>
-                </select>
-                <input type="text" id="quantity1" class="text-box small-text input" required>
-                <div id="radio" class="input" >
-                    <label>Availablity :</label><input type="radio" value="Yes" id="yes1" name="availablity1" /> Yes
-                    <input type="radio" value="No" id="no1" name="availablity1" /> No
-                </div>
-                <div id="checkbox" class="input" >
-                    <label>Discounts :</label>
-                    <input type="checkbox" value="HDFC Bank" name="discounts1" />HDFC Bank
-                    
+    <head>
+        <title>Order Form</title>
+        <link rel="stylesheet" href="orderForm.css">
+    </head>
+    
+    <body>
+        <form name='orderForm' class="form">
+            <div id="order-head">
+                <h3 align='center'>Shopping List</h3>
+                <table id="table1">
+                    <thead>
+                        <tr>
+                            <th style="width: 70px;">ID</th>
+                            <th style="width: 180px;">Product Name</th>
+                            <th style="width: 80px;">Category</th>
+                            <th style="width: 80px;">Quantity</th>
+                            <th style="width: 165px;">Availablity</th>
+                            <th style="width: 165px;">Discounts</th>
+                        </tr>
+                    </thead>
+                </table>
+                <div id="order-row-1" class="row">
+                    <input type="number"max=10 min=0 id="pro-id1" class="text-box small-text input" placeholder="Product ID" required>
+                    <input type="text" id="pro-name1" class="text-box input" placeholder="Product Name"required>
+                    <select id="pro-category1" class="input">
+                        <option value="Mobile">
+                            Mobile
+                        </option>
+                        <option value="Computer">Computer</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <input type="number"max=10 min=0 id="quantity1" class="text-box small-text input" placeholder="quantity"required>
+                    <div id="radio" class="input">
+                        <label>Availablity :</label><input type="radio" value="Yes" id="yes1" name="availablity1" /> Yes
+                        <input type="radio" value="No" id="no1" name="availablity1" > No
+                    </div>
+                    <div id="checkbox" class="input">
+                        <label>Discounts :</label>
+                        <input type="checkbox" value="HDFC Bank" name="discounts1" />HDFC Bank
+                        <input type="checkbox" value="SBI Bank" name="discounts1">SBI Bank
+                        <input type="checkbox" value="Master Card" name="discounts1" >Master Card
+                    </div>
                 </div>
             </div>
-        </div>
-        <div id="order-body">
-            <button type='button' id="add">Add</button>
-            <button type='submit' id="submit">submit</button>
-            <button type='button' id="reset">Reset</button>
-        </div>
-        <div id="order-footer">
-            <table id="table">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Product Name</th>
-                        <th>Category</th>
-                        <th>Quantity</th>
-                        <th>Availablity</th>
-                        <th>Discounts</th>
-                    </tr>
-                </thead>
-                <tbody id="table-body">
-
-                </tbody>
-            </table>
-        </div>
-    </form>
-</body>
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-</script>
-<script src="orderForm.js"></script>
-
-</html>
+            <div id="order-body">
+                <button type='button' id="add">Add</button>
+                <button type='submit' id="submit">submit</button>
+                <button type='button' id="clear">Reset</button>
+            </div>
+            <div id="order-footer">
+                <table id="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Quantity</th>
+                            <th>Availablity</th>
+                            <th>Discounts</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+    
+                    </tbody>
+                </table>
+            </div>
+        </form>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" ></script>
+    <script src="orderForm.js"></script>
+    </html>
