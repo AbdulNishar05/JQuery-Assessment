@@ -1,4 +1,4 @@
-$(document).ready(() => {
+$(document).ready(function() {
      var rowCount = 1;
      var rows = [1];
      var displayTable = false;
@@ -9,7 +9,7 @@ $(document).ready(() => {
      } else {
          table.css('display', 'none');
      }
-     $('#add').click(() => {
+     $('#add').click(function() {
          rowCount += 1;
          rows.push(rowCount);
          var head = $('#order-head');
@@ -22,7 +22,7 @@ $(document).ready(() => {
          head.append(div);
      });
  
-     $(document).on('click', '.del-btn', (event) => {
+     $(document).on('click', '.del-btn',function (event) {
          let id = $(event.currentTarget).val();
          var removeDivID = "order-row-" + id;
          let index = rows.indexOf(parseInt(id));
